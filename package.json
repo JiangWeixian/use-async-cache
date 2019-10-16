@@ -1,16 +1,16 @@
 {
-  "name": "@aiou/rollup-template",
-  "version": "1.5.1",
-  "main": "lib/how-long-till-lunch.cjs.js",
-  "module": "lib/how-long-till-lunch.esm.js",
-  "browser": "lib/how-long-till-lunch.umd.js",
+  "name": "use-async-cache",
+  "version": "0.0.0",
+  "main": "lib/use-async-cache.cjs.js",
+  "module": "lib/use-async-cache.esm.js",
+  "browser": "lib/use-async-cache.umd.js",
   "typings": "lib/index.d.ts",
-  "dependencies": {
-    "ms": "2.1.1"
+  "peerDependencies": {
+    "react": ">=16.9.0"
   },
   "devDependencies": {
     "@types/jest": "24.0.18",
-    "@types/ms": "0.7.30",
+    "@types/react": "16.9.7",
     "husky": "3.0.1",
     "jest": "24.9.0",
     "np": "5.0.3",
