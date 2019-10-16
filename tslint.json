@@ -6,7 +6,6 @@
     "no-floating-promises": false,
     "no-any": true,
     "ordered-imports": false,
-    "deprecation": true,
     "file-name-casing": false,
     "no-implicit-dependencies": [true, "react-hot-loader", "@"],
     "jsx-no-lambda": false,

@@ -9,6 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
+    "declaration": true,
     "strict": true,
     "resolveJsonModule": true,
     "noImplicitReturns": true,
