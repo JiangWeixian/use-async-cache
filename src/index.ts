@@ -1,3 +1,4 @@
+// refs: https://github.com/facebook/react/issues/10231
 import { useEffect, useState } from 'react'
 
 const store: { [key: string]: unknown } = {}

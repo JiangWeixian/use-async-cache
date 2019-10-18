@@ -4,7 +4,7 @@
   "main": "lib/use-async-cache.cjs.js",
   "module": "lib/use-async-cache.esm.js",
   "browser": "lib/use-async-cache.umd.js",
-  "typings": "lib/index.d.ts",
+  "typings": "lib/src/index.d.ts",
   "peerDependencies": {
     "react": ">=16.9.0",
     "@types/react": ">=16.9.0"
