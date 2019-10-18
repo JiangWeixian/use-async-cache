@@ -1,36 +1,64 @@
-# @aiou/rollup-template
-> rollup-template for single lib
+# use-async-cache
+![Version](https://img.shields.io/npm/v/use-async-cache?style=for-the-badge)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](#)
+[![Twitter: jiangweixian](https://img.shields.io/twitter/follow/jiangweixian.svg?style=for-the-badge)](https://twitter.com/jiangweixian)
 
-[![npm](https://img.shields.io/npm/v/@aiou/rollup-template?style=for-the-badge)](https://github.com/JiangWeixian/templates/tree/master/packages/core) [![GitHub](https://img.shields.io/github/license/jiangweixian/templates?style=for-the-badge)](https://github.com/JiangWeixian/templates/tree/master/packages/rollup-template)
+> a simple react hooks implement for async cache store;
 
-## Note
+> a list of `[element1, ..., elementn]` use `async-date from same api`。`[element1, ..., elementn]` will share same async-cache，`api` will request once。
 
-- maybe need to custom `prepublishOnly script` in package.json and other package info
-- need reconfig `baseUrl and paths` in `tsconfig.json`
+## Install
 
-This repo contains a bare-bones example of how to create a library using Rollup, including importing a module from `node_modules` and converting it from CommonJS.
-
-We're creating a library called `how-long-till-lunch`, which usefully tells us how long we have to wait until lunch, using the [ms](https://github.com/zeit/ms) package:
-
-```js
-console.log('it will be lunchtime in ' + howLongTillLunch());
+```sh
+npm install
 ```
 
-## Getting started
+## Usage
+> api will only request once
 
-`npm run build` builds the library to `dist`, generating three files:
+```tsx
+import React from 'react';
+import { useAsyncCache } from 'use-async-cache';
 
-* `dist/how-long-till-lunch.cjs.js`
-    A CommonJS bundle, suitable for use in Node.js, that `require`s the external dependency. This corresponds to the `"main"` field in package.json
-* `dist/how-long-till-lunch.esm.js`
-    an ES module bundle, suitable for use in other people's libraries and applications, that `import`s the external dependency. This corresponds to the `"module"` field in package.json
-* `dist/how-long-till-lunch.umd.js`
-    a UMD build, suitable for use in any environment (including the browser, as a `<script>` tag), that includes the external dependency. This corresponds to the `"browser"` field in package.json
+import { cache } from '@/api/cache';
 
-`npm run dev` builds the library, then keeps rebuilding it whenever the source files change using [rollup-watch](https://github.com/rollup/rollup-watch).
+export const Element = () => {
+  const { cached } = useAsyncCache({
+    id: '1',
+    api: cache.fetch,
+  });
+  return <span>{cached && cached.data}</span>;
+};
+```
 
-`npm test` builds the library, then tests it.
+```tsx
+import React from 'react';
 
-# Q&A
+import { Element } from './components/Element';
 
-1. rollup is not recommended, if project that contains builtin node module
+export default () => {
+  return Array(10)
+    .fill(0)
+    .map(() => <Element />);
+};
+```
+
+**api.cache.fetch will only request once for 10 element**
+
+## Author
+
+👤 **JW**
+
+* Twitter: [@jiangweixian](https://twitter.com/jiangweixian)
+* Github: [@JiangWeixian](https://github.com/JiangWeixian)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+<a href="https://www.patreon.com/jiangweixian">
+  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
+</a>
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
