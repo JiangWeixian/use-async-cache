@@ -1,6 +1,6 @@
 {
   "name": "use-async-cache",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib/use-async-cache.cjs.js",
   "module": "lib/use-async-cache.esm.js",
   "browser": "lib/use-async-cache.umd.js",
