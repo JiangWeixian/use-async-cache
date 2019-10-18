@@ -7,6 +7,8 @@
 
 > a list of `[element1, ..., elementn]` use `async-date from same api`。`[element1, ..., elementn]` will share same async-cache，`api` will request once。
 
+see more [props](/docs/use-async-cache.md)
+
 ## Install
 
 ```sh
