@@ -12,7 +12,7 @@ see more [props](/docs/use-async-cache.md)
 ## Install
 
 ```sh
-npm install
+npm install use-async-cache --save
 ```
 
 ## Usage
