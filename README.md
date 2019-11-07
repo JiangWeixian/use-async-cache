@@ -1,3 +1,9 @@
+<!--
+  Title: use-async-cache
+  Description: a list of `[element1, ..., elementn]` use `async-date from same api`。`[element1, ..., elementn]` will share same async-cache，`api` will request once。
+  Author: JiangWeixian
+  -->
+
 # use-async-cache
 ![Version](https://img.shields.io/npm/v/use-async-cache?style=for-the-badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](#)
